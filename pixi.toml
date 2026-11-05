@@ -1,0 +1,27 @@
+[workspace]
+name = "libheif-js"
+version = "1.23.7"
+description = "libheif + libde265 compiled to plain JavaScript for script-src 'self' pages"
+authors = ["DJ Tratoh"]
+license = "LGPL-3.0-or-later"
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[dependencies]
+emscripten = "==4.0.9"
+cmake = "==4.4.5"
+make = "==4.4.1"
+
+[tasks]
+build = "bash build/build.sh work"
+
+[feature.test.dependencies]
+python = "3.12.*"
+numpy = ">=2.5.4,<3"
+libheif = "==1.23.7"
+
+[feature.test.tasks]
+fixtures = "python -I test/fixtures.py '' work/fixtures"
+
+[environments]
+test = { features = ["test"] }
