@@ -159,7 +159,7 @@ later. The files in this repository (`build/`, `test/`, the build output in `dis
 are licensed under the **GNU LGPL v3 or later** as well: see `LICENSE` and `COPYING`.
 `dist/libheif.js` also contains Emscripten's runtime and system libraries (Emscripten:
 MIT / UIUC-NCSA; musl: MIT; libc++, compiler-rt: Apache-2.0 WITH LLVM-exception;
-dlmalloc: public domain).
+dlmalloc: public domain); their licence texts are in `LICENSES/`.
 
 If you serve `dist/libheif.js`, see [`LICENSES/README.md`](LICENSES/README.md) for what
 the LGPL asks: keep the notice and licence texts with it, make the corresponding source
